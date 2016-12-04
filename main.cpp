@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 
     QStyle *s = app.style();
     qDebug() << s->objectName();
-
     QQmlApplicationEngine engine;
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
 

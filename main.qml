@@ -1,11 +1,14 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
+import QtQuick.Window 2.2
 
 ApplicationWindow {
     visible: true
     width: 640
     height: 480
+    visibility: Window.Maximized
+
     title: qsTr("Hello World")
 
     SwipeView {
@@ -14,6 +17,7 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
 
         Page1 {
+            id: page1
         }
 
         Page {
@@ -24,7 +28,7 @@ ApplicationWindow {
         }
     }
 
-    footer: TabBar {
+    header: TabBar {
         id: tabBar
         currentIndex: swipeView.currentIndex
         TabButton {
